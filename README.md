@@ -13,6 +13,9 @@ Along with implementing business rule management functionality, it also demonstr
 - iternationalization (the software is available in Czech and English)
 - component-based design of UI (React is used)
 
+# Architecture
+![architecture.svg](architecture.svg)
+
 # Index
 - [about testing](readme-testing.md)
 - [documentation](readme-doc.md)
@@ -36,3 +39,6 @@ Along with implementing business rule management functionality, it also demonstr
 2. run ```npm install```
 3. run ```npm run build```
 4. upload the contents of /build to a web server
+
+# Use cases
+![usecase.svg](usecase.svg)
