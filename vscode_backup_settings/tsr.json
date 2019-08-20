@@ -1,0 +1,64 @@
+{
+	"arrow method": {
+		"prefix": "a",
+		"body": [
+			"($1) => {$2}"
+		],
+		"description": "Empty arrow method"
+	},
+
+	"describe": {
+		"prefix": "d",
+		"body": [
+			"import * as React from 'react';",
+			"import { shallow, mount, ShallowWrapper } from 'enzyme';",
+			"",
+			"describe('$1', () => {",
+			"    let component: ShallowWrapper;",
+			"    beforeEach(() => {",
+			"        component = shallow(<$1/>);",
+			"    });",
+			"",
+			"    it('renders without crashing', () => {});",
+			"});"
+		],
+		"description": "Jasmine describe() method"
+	},
+
+	
+	
+	"it": {
+		"prefix": "i",
+		"body": [
+			"it('$1', () => {",
+			"    $2",
+			"});"
+		],
+		"description": "Jasmine it() method"
+	},
+
+	"Component": {
+		"prefix": "c",
+		"body": [
+			"import * as React from 'react';",
+			"import { Switch } from 'antd';",
+			"",
+			"interface IProps {}",
+			"interface IState {}",
+			"",
+			"class $1 extends React.Component<IProps, IState> {",
+			"    constructor(props: any) {",
+			"        super(props);",
+			"        this.state = {};",
+			"    }",
+			"",
+  			"    render() {",
+    		"        return (<div></div>);",
+			"    }",
+			"}",
+			"",
+			"export default $1;",
+		],
+		"description": "React component in typescript"
+	}
+}

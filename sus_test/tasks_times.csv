@@ -1,0 +1,20 @@
+čas na splnění úlohy (v sekundách) - nová verze,Tester 0,Tester 1,Tester 2
+1. Úkol - jednoduchý algoritmus,76,60,90
+2. Úkol - výraz,62,60,80
+3. Úkol - copy & paste,12,20,16
+4. Úkol - práce s dokumentem,45,50,51
+5. Úkol - větší algoritmus,140,260,120
+6. Úkol - orientace ve velkém pravidle,20,60,44
+
+čas na splnění úlohy - původní verze,Tester 0,Tester 1,Tester 2
+1. Úkol - jednoduchý algoritmus,131,110,80
+2. Úkol - výraz,84,70,65
+3. Úkol - copy & paste,27,100,16
+4. Úkol - práce s dokumentem,70,50,37
+5. Úkol - větší algoritmus,342,310,180
+6. Úkol - orientace ve velkém pravidle,60,200,35
+
+
+Tester 0 - má dobrou znalost nové verze RMI
+Tester 1 - má lehkou znalost obou verzí RMI
+Tester 2 - má dobrou znalost původní verze RMI

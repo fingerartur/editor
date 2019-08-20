@@ -1,0 +1,49 @@
+{
+  "name": "react-cust",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "",
+  "dependencies": {
+    "@types/prop-types": "^15.5.3",
+    "antd": "^3.4.3",
+    "i18next": "^11.3.3",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-i18next": "^7.3.6",
+    "react-redux": "^5.0.6",
+    "react-scripts-ts": "2.13.0",
+    "redux": "^3.7.2",
+    "snapsvg-cjs": "git+https://github.com/fingerartur/Snap.svg-cjs.git",
+    "text-width": "^1.2.0",
+    "ts-command-invoker": "^1.0.1",
+    "ts-keycode-enum": "^1.0.4",
+    "typed-undo": "^1.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts-ts start",
+    "build": "react-scripts-ts build",
+    "test": "react-scripts-ts test --env=jsdom",
+    "eject": "react-scripts-ts eject",
+    "e2e": "cypress open"
+  },
+  "devDependencies": {
+    "@types/enzyme": "^3.1.11",
+    "@types/i18next": "^8.4.3",
+    "@types/jest": "^22.1.1",
+    "@types/node": "^9.4.1",
+    "@types/react": "^16.0.36",
+    "@types/react-dom": "^16.0.3",
+    "@types/react-i18next": "^7.3.0",
+    "@types/react-redux": "^5.0.14",
+    "cypress": "^3.2.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "imports-loader": "^0.8.0",
+    "prop-types": "^15.6.2",
+    "react-cosmos-test": "^3.6.1",
+    "react-test-renderer": "^16.2.0",
+    "redux-mock-store": "^1.5.1",
+    "strip-json-comments-loader": "0.0.2",
+    "typescript": "^2.7.1"
+  }
+}

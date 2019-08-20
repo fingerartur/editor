@@ -1,0 +1,677 @@
+{
+    "id": 1,
+    "name": "Example 1",
+    "description": "Checking the price of goods",
+    "declarations": {
+        "nextId": 1003,
+        "declarations": [
+            {
+                "id": 1,
+                "name": "Document",
+                "type": {
+                    "name": "Doc"
+                }
+            },
+            {
+                "id": 1000,
+                "name": "badness",
+                "type": {
+                    "name": "float"
+                }
+            },
+            {
+                "id": 1001,
+                "name": "item",
+                "type": {
+                    "name": "Item",
+                    "isMultiValued": false
+                }
+            },
+            {
+                "id": 1002,
+                "name": "coefficient",
+                "type": {
+                    "name": "number",
+                    "isMultiValued": false
+                }
+            }
+        ]
+    },
+    "rule": {
+        "what": "sub-rule",
+        "elements": [
+            {
+                "text": "start",
+                "what": "element",
+                "elementType": "end",
+                "errors": []
+            },
+            {
+                "text": "initialize badness to 0",
+                "what": "element",
+                "elementType": "assign",
+                "errors": [],
+                "variable": {
+                    "id": 1000,
+                    "name": "badness",
+                    "type": {
+                        "name": "float"
+                    },
+                    "isDeclaration": true
+                },
+                "expression": {
+                    "what": "expression",
+                    "root": {
+                        "name": "root",
+                        "type": {
+                            "name": "float"
+                        },
+                        "error": null,
+                        "value": {
+                            "value": "0.0",
+                            "what": "literal",
+                            "type": {
+                                "name": "float",
+                                "isMultiValued": false
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "text": "Iterate over all items",
+                "what": "element",
+                "elementType": "iteration",
+                "errors": [],
+                "variable": {
+                    "id": 1001,
+                    "name": "item",
+                    "type": {
+                        "name": "Item",
+                        "isMultiValued": false
+                    },
+                    "isDeclaration": true
+                },
+                "value": {
+                    "id": 1,
+                    "access": "Document.Items",
+                    "type": {
+                        "name": "Item",
+                        "isMultiValued": true
+                    },
+                    "what": "variableAccess"
+                },
+                "cycle": {
+                    "what": "sub-rule",
+                    "elements": [
+                        {
+                            "text": "start",
+                            "what": "element",
+                            "elementType": "end",
+                            "errors": []
+                        },
+                        {
+                            "what": "element",
+                            "elementType": "iterationHelper"
+                        },
+                        {
+                            "text": "compute the price coefficient",
+                            "what": "element",
+                            "elementType": "assign",
+                            "errors": [],
+                            "variable": {
+                                "id": 1002,
+                                "name": "coefficient",
+                                "type": {
+                                    "name": "number",
+                                    "isMultiValued": false
+                                },
+                                "isDeclaration": true
+                            },
+                            "expression": {
+                                "what": "expression",
+                                "root": {
+                                    "name": "root",
+                                    "type": {
+                                        "name": "number",
+                                        "isMultiValued": false
+                                    },
+                                    "error": null,
+                                    "value": {
+                                        "name": "squareRoot",
+                                        "sign": null,
+                                        "type": {
+                                            "name": "number",
+                                            "isMultiValued": false
+                                        },
+                                        "args": [
+                                            {
+                                                "name": "a",
+                                                "type": {
+                                                    "name": "number",
+                                                    "isMultiValued": false
+                                                },
+                                                "error": null,
+                                                "value": {
+                                                    "name": "sum (float)",
+                                                    "sign": "+",
+                                                    "type": {
+                                                        "name": "float",
+                                                        "isMultiValued": false
+                                                    },
+                                                    "args": [
+                                                        {
+                                                            "name": "a",
+                                                            "type": {
+                                                                "name": "float",
+                                                                "isMultiValued": false
+                                                            },
+                                                            "error": null,
+                                                            "value": {
+                                                                "name": "times (float)",
+                                                                "sign": "*",
+                                                                "type": {
+                                                                    "name": "float",
+                                                                    "isMultiValued": false
+                                                                },
+                                                                "args": [
+                                                                    {
+                                                                        "name": "a",
+                                                                        "type": {
+                                                                            "name": "float",
+                                                                            "isMultiValued": false
+                                                                        },
+                                                                        "error": null,
+                                                                        "value": {
+                                                                            "id": 1001,
+                                                                            "access": "item.price",
+                                                                            "type": {
+                                                                                "name": "int",
+                                                                                "isMultiValued": false
+                                                                            },
+                                                                            "what": "variableAccess"
+                                                                        }
+                                                                    },
+                                                                    {
+                                                                        "name": "b",
+                                                                        "type": {
+                                                                            "name": "float",
+                                                                            "isMultiValued": false
+                                                                        },
+                                                                        "error": null,
+                                                                        "value": {
+                                                                            "id": 1001,
+                                                                            "access": "item.amount",
+                                                                            "type": {
+                                                                                "name": "float",
+                                                                                "isMultiValued": false
+                                                                            },
+                                                                            "what": "variableAccess"
+                                                                        }
+                                                                    }
+                                                                ],
+                                                                "what": "operation"
+                                                            }
+                                                        },
+                                                        {
+                                                            "name": "b",
+                                                            "type": {
+                                                                "name": "float",
+                                                                "isMultiValued": false
+                                                            },
+                                                            "error": null,
+                                                            "value": {
+                                                                "name": "division (float)",
+                                                                "sign": "/",
+                                                                "type": {
+                                                                    "name": "float",
+                                                                    "isMultiValued": false
+                                                                },
+                                                                "args": [
+                                                                    {
+                                                                        "name": "a",
+                                                                        "type": {
+                                                                            "name": "float",
+                                                                            "isMultiValued": false
+                                                                        },
+                                                                        "error": null,
+                                                                        "value": {
+                                                                            "array": {
+                                                                                "id": 1,
+                                                                                "access": "Document.cargoWeigths",
+                                                                                "type": {
+                                                                                    "name": "int",
+                                                                                    "isMultiValued": true
+                                                                                },
+                                                                                "what": "variableAccess"
+                                                                            },
+                                                                            "index": {
+                                                                                "value": {
+                                                                                    "value": "0",
+                                                                                    "what": "literal",
+                                                                                    "type": {
+                                                                                        "name": "boolean",
+                                                                                        "isMultiValued": false
+                                                                                    }
+                                                                                },
+                                                                                "error": null,
+                                                                                "name": "index",
+                                                                                "type": {
+                                                                                    "name": "int"
+                                                                                }
+                                                                            },
+                                                                            "what": "arrayAccess"
+                                                                        }
+                                                                    },
+                                                                    {
+                                                                        "name": "b",
+                                                                        "type": {
+                                                                            "name": "float",
+                                                                            "isMultiValued": false
+                                                                        },
+                                                                        "error": null,
+                                                                        "value": {
+                                                                            "id": 1,
+                                                                            "access": "Document.Person.Age",
+                                                                            "type": {
+                                                                                "name": "int",
+                                                                                "isMultiValued": false
+                                                                            },
+                                                                            "what": "variableAccess"
+                                                                        }
+                                                                    }
+                                                                ],
+                                                                "what": "operation"
+                                                            }
+                                                        }
+                                                    ],
+                                                    "what": "operation"
+                                                }
+                                            }
+                                        ],
+                                        "what": "operation"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "text": "if price coefficient is more than 100K",
+                            "what": "element",
+                            "elementType": "if",
+                            "errors": [],
+                            "condition": {
+                                "what": "expression",
+                                "root": {
+                                    "name": "condition",
+                                    "type": {
+                                        "name": "boolean",
+                                        "isMultiValued": false
+                                    },
+                                    "error": null,
+                                    "value": {
+                                        "name": "less",
+                                        "sign": "<",
+                                        "type": {
+                                            "name": "boolean",
+                                            "isMultiValued": false
+                                        },
+                                        "args": [
+                                            {
+                                                "name": "left",
+                                                "type": {
+                                                    "name": "string",
+                                                    "isMultiValued": false
+                                                },
+                                                "error": null,
+                                                "value": {
+                                                    "value": "10000",
+                                                    "what": "literal",
+                                                    "type": {
+                                                        "name": "int",
+                                                        "isMultiValued": false
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "name": "right",
+                                                "type": {
+                                                    "name": "string",
+                                                    "isMultiValued": false
+                                                },
+                                                "error": null,
+                                                "value": {
+                                                    "id": 1002,
+                                                    "access": "coefficient",
+                                                    "type": {
+                                                        "name": "number",
+                                                        "isMultiValued": false
+                                                    },
+                                                    "what": "variableAccess"
+                                                }
+                                            }
+                                        ],
+                                        "what": "operation"
+                                    }
+                                }
+                            },
+                            "branchTrue": {
+                                "what": "sub-rule",
+                                "elements": [
+                                    {
+                                        "text": "start",
+                                        "what": "element",
+                                        "elementType": "end",
+                                        "errors": []
+                                    },
+                                    {
+                                        "text": "increase badness by 0.1",
+                                        "what": "element",
+                                        "elementType": "assign",
+                                        "errors": [],
+                                        "variable": {
+                                            "name": "badness",
+                                            "id": 1000,
+                                            "type": {
+                                                "name": "float"
+                                            },
+                                            "isDeclaration": false
+                                        },
+                                        "expression": {
+                                            "what": "expression",
+                                            "root": {
+                                                "name": "root",
+                                                "type": null,
+                                                "error": null,
+                                                "value": {
+                                                    "name": "sum (float)",
+                                                    "sign": "+",
+                                                    "type": {
+                                                        "name": "float",
+                                                        "isMultiValued": false
+                                                    },
+                                                    "args": [
+                                                        {
+                                                            "name": "a",
+                                                            "type": {
+                                                                "name": "float",
+                                                                "isMultiValued": false
+                                                            },
+                                                            "error": null,
+                                                            "value": {
+                                                                "id": 1000,
+                                                                "access": "badness",
+                                                                "type": {
+                                                                    "name": "float",
+                                                                    "isMultiValued": false
+                                                                },
+                                                                "what": "variableAccess"
+                                                            }
+                                                        },
+                                                        {
+                                                            "name": "b",
+                                                            "type": {
+                                                                "name": "float",
+                                                                "isMultiValued": false
+                                                            },
+                                                            "error": null,
+                                                            "value": {
+                                                                "value": "0.1",
+                                                                "what": "literal",
+                                                                "type": {
+                                                                    "name": "float",
+                                                                    "isMultiValued": false
+                                                                }
+                                                            }
+                                                        }
+                                                    ],
+                                                    "what": "operation"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "text": "end",
+                                        "what": "element",
+                                        "elementType": "end",
+                                        "errors": []
+                                    }
+                                ]
+                            },
+                            "branchFalse": {
+                                "what": "sub-rule",
+                                "elements": [
+                                    {
+                                        "text": "start",
+                                        "what": "element",
+                                        "elementType": "end",
+                                        "errors": []
+                                    },
+                                    {
+                                        "text": "end",
+                                        "what": "element",
+                                        "elementType": "end",
+                                        "errors": []
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "text": "end",
+                            "what": "element",
+                            "elementType": "end",
+                            "errors": []
+                        }
+                    ]
+                }
+            },
+            {
+                "text": "if badness is too high",
+                "what": "element",
+                "elementType": "if",
+                "errors": [],
+                "condition": {
+                    "what": "expression",
+                    "root": {
+                        "name": "condition",
+                        "type": {
+                            "name": "boolean",
+                            "isMultiValued": false
+                        },
+                        "error": null,
+                        "value": {
+                            "name": "or",
+                            "sign": "OR",
+                            "type": {
+                                "name": "boolean",
+                                "isMultiValued": false
+                            },
+                            "args": [
+                                {
+                                    "name": "a",
+                                    "type": {
+                                        "name": "boolean",
+                                        "isMultiValued": false
+                                    },
+                                    "error": null,
+                                    "value": {
+                                        "name": "and",
+                                        "sign": "AND",
+                                        "type": {
+                                            "name": "boolean",
+                                            "isMultiValued": false
+                                        },
+                                        "args": [
+                                            {
+                                                "name": "a",
+                                                "type": {
+                                                    "name": "boolean",
+                                                    "isMultiValued": false
+                                                },
+                                                "error": null,
+                                                "value": {
+                                                    "id": 1,
+                                                    "access": "Document.Person.isSuspicious",
+                                                    "type": {
+                                                        "name": "boolean",
+                                                        "isMultiValued": false
+                                                    },
+                                                    "what": "variableAccess"
+                                                }
+                                            },
+                                            {
+                                                "name": "b",
+                                                "type": {
+                                                    "name": "boolean",
+                                                    "isMultiValued": false
+                                                },
+                                                "error": null,
+                                                "value": {
+                                                    "name": "less or equal",
+                                                    "sign": "=<",
+                                                    "type": {
+                                                        "name": "boolean",
+                                                        "isMultiValued": false
+                                                    },
+                                                    "args": [
+                                                        {
+                                                            "name": "left",
+                                                            "type": {
+                                                                "name": "string",
+                                                                "isMultiValued": false
+                                                            },
+                                                            "error": null,
+                                                            "value": {
+                                                                "value": "0.5",
+                                                                "what": "literal",
+                                                                "type": {
+                                                                    "name": "float",
+                                                                    "isMultiValued": false
+                                                                }
+                                                            }
+                                                        },
+                                                        {
+                                                            "name": "right",
+                                                            "type": {
+                                                                "name": "string",
+                                                                "isMultiValued": false
+                                                            },
+                                                            "error": null,
+                                                            "value": {
+                                                                "id": 1000,
+                                                                "access": "badness",
+                                                                "type": {
+                                                                    "name": "float",
+                                                                    "isMultiValued": false
+                                                                },
+                                                                "what": "variableAccess"
+                                                            }
+                                                        }
+                                                    ],
+                                                    "what": "operation"
+                                                }
+                                            }
+                                        ],
+                                        "what": "operation"
+                                    }
+                                },
+                                {
+                                    "name": "b",
+                                    "type": {
+                                        "name": "boolean",
+                                        "isMultiValued": false
+                                    },
+                                    "error": null,
+                                    "value": {
+                                        "name": "less or equal",
+                                        "sign": "=<",
+                                        "type": {
+                                            "name": "boolean",
+                                            "isMultiValued": false
+                                        },
+                                        "args": [
+                                            {
+                                                "name": "left",
+                                                "type": {
+                                                    "name": "string",
+                                                    "isMultiValued": false
+                                                },
+                                                "error": null,
+                                                "value": {
+                                                    "value": "0.85",
+                                                    "what": "literal",
+                                                    "type": {
+                                                        "name": "float",
+                                                        "isMultiValued": false
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "name": "right",
+                                                "type": {
+                                                    "name": "string",
+                                                    "isMultiValued": false
+                                                },
+                                                "error": null,
+                                                "value": {
+                                                    "id": 1000,
+                                                    "access": "badness",
+                                                    "type": {
+                                                        "name": "float",
+                                                        "isMultiValued": false
+                                                    },
+                                                    "what": "variableAccess"
+                                                }
+                                            }
+                                        ],
+                                        "what": "operation"
+                                    }
+                                }
+                            ],
+                            "what": "operation"
+                        }
+                    }
+                },
+                "branchTrue": {
+                    "what": "sub-rule",
+                    "elements": [
+                        {
+                            "text": "start",
+                            "what": "element",
+                            "elementType": "end",
+                            "errors": []
+                        },
+                        {
+                            "text": "end",
+                            "what": "element",
+                            "elementType": "end",
+                            "errors": []
+                        }
+                    ]
+                },
+                "branchFalse": {
+                    "what": "sub-rule",
+                    "elements": [
+                        {
+                            "text": "start",
+                            "what": "element",
+                            "elementType": "end",
+                            "errors": []
+                        },
+                        {
+                            "text": "end",
+                            "what": "element",
+                            "elementType": "end",
+                            "errors": []
+                        }
+                    ]
+                }
+            },
+            {
+                "text": "end",
+                "what": "element",
+                "elementType": "end",
+                "errors": []
+            }
+        ]
+    }
+}

@@ -1,0 +1,55 @@
+{
+	"arrow method": {
+		"prefix": "a",
+		"body": [
+			"($1) => {$2}"
+		],
+		"description": "Empty arrow method"
+	},
+	
+	"describe": {
+		"prefix": "d",
+		"body": [
+			"describe('$1', () => {",
+			"    beforeEach(() => {});",
+			"",
+			"    it('constructs', () => {",
+			"        //",
+			"    });",
+			"",
+			"    $2",
+			"});"
+		],
+		"description": "Jasmine describe() method"
+	},
+	
+	"it": {
+		"prefix": "i",
+		"body": [
+			"it('$1', () => {",
+			"    $2",
+			"});"
+		],
+		"description": "Jasmine it() method"
+	},
+
+	"class": {
+		"prefix": "c",
+		"body": [
+			"export class $1 {",
+			"    $2",
+			"}"
+		],
+		"description": "typescript class"
+	},
+
+	"interface": {
+		"prefix": "ii",
+		"body": [
+			"export interface $1 {",
+			"    $2",
+			"}"
+		],
+		"description": "typescript interface"
+	},
+}

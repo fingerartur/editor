@@ -1,0 +1,32 @@
+{  
+  "compilerOptions": {
+    "module": "esnext",
+    "skipLibCheck": true,
+    "baseUrl": "src/",
+    "outDir": "build/dist",
+    "target": "es5",
+    "lib": [ "es7", "dom" ],
+    "sourceMap": true,
+    "allowJs": true,
+    "jsx": "react",
+    "moduleResolution": "node",
+    "rootDir": "src",
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "strictNullChecks": false,
+    "suppressImplicitAnyIndexErrors": true,
+    "typeRoots": [ "./node_modules/@types" ],
+    "noUnusedLocals": false
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.jsx",
+    "src/**/*.js"
+  ],
+  "exclude": [
+    "**/*test.ts*"
+  ]
+}

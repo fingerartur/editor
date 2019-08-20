@@ -1,0 +1,208 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rule serializes 1`] = `
+Object {
+  "declarations": Object {
+    "declarations": Array [
+      Object {
+        "id": 1,
+        "name": "globalVar",
+        "type": Object {
+          "name": "boolean",
+        },
+      },
+      Object {
+        "id": 1001,
+        "name": "x",
+        "type": Object {
+          "name": "int",
+        },
+      },
+      Object {
+        "id": 1002,
+        "name": "y",
+        "type": Object {
+          "name": "int",
+        },
+      },
+      Object {
+        "id": 1003,
+        "name": "z",
+        "type": Object {
+          "name": "int",
+        },
+      },
+    ],
+    "nextId": 1004,
+  },
+  "description": "Used in a unit test",
+  "id": 1,
+  "name": "Test rule",
+  "rule": Object {
+    "elements": Array [
+      Object {
+        "elementType": "end",
+        "errors": Array [],
+        "text": "start",
+        "what": "element",
+      },
+      Object {
+        "elementType": "assign",
+        "errors": Array [],
+        "expression": Object {
+          "root": Object {
+            "error": null,
+            "name": "root",
+            "type": null,
+            "value": null,
+          },
+          "what": "expression",
+        },
+        "text": "assign to x",
+        "variable": Object {
+          "id": 1001,
+          "isDeclaration": true,
+          "name": "x",
+          "type": Object {
+            "name": "int",
+          },
+        },
+        "what": "element",
+      },
+      Object {
+        "elementType": "assign",
+        "errors": Array [],
+        "expression": Object {
+          "root": Object {
+            "error": null,
+            "name": "root",
+            "type": null,
+            "value": null,
+          },
+          "what": "expression",
+        },
+        "text": "assign to y",
+        "variable": Object {
+          "id": 1002,
+          "isDeclaration": true,
+          "name": "y",
+          "type": Object {
+            "name": "int",
+          },
+        },
+        "what": "element",
+      },
+      Object {
+        "branchFalse": Object {
+          "elements": Array [
+            Object {
+              "elementType": "end",
+              "errors": Array [],
+              "text": "start",
+              "what": "element",
+            },
+            Object {
+              "elementType": "assign",
+              "errors": Array [],
+              "expression": Object {
+                "root": Object {
+                  "error": null,
+                  "name": "root",
+                  "type": null,
+                  "value": null,
+                },
+                "what": "expression",
+              },
+              "text": "assign to z",
+              "variable": Object {
+                "id": 1003,
+                "isDeclaration": true,
+                "name": "z",
+                "type": Object {
+                  "name": "int",
+                },
+              },
+              "what": "element",
+            },
+            Object {
+              "elementType": "end",
+              "errors": Array [],
+              "text": "end",
+              "what": "element",
+            },
+          ],
+          "what": "sub-rule",
+        },
+        "branchTrue": Object {
+          "elements": Array [
+            Object {
+              "elementType": "end",
+              "errors": Array [],
+              "text": "start",
+              "what": "element",
+            },
+            Object {
+              "elementType": "assign",
+              "errors": Array [],
+              "expression": Object {
+                "root": Object {
+                  "error": null,
+                  "name": "root",
+                  "type": null,
+                  "value": null,
+                },
+                "what": "expression",
+              },
+              "text": "assign to x",
+              "variable": Object {
+                "id": 1001,
+                "name": "x",
+                "type": Object {
+                  "name": "int",
+                },
+              },
+              "what": "element",
+            },
+            Object {
+              "elementType": "end",
+              "errors": Array [],
+              "text": "end",
+              "what": "element",
+            },
+          ],
+          "what": "sub-rule",
+        },
+        "condition": Object {
+          "root": Object {
+            "error": null,
+            "name": "root",
+            "type": Object {
+              "name": "boolean",
+            },
+            "value": Object {
+              "access": "globalVar",
+              "id": 1,
+              "type": Object {
+                "name": "boolean",
+              },
+              "what": "variableAccess",
+            },
+          },
+          "what": "expression",
+        },
+        "elementType": "if",
+        "errors": Array [],
+        "text": "condition",
+        "what": "element",
+      },
+      Object {
+        "elementType": "end",
+        "errors": Array [],
+        "text": "end",
+        "what": "element",
+      },
+    ],
+    "what": "sub-rule",
+  },
+}
+`;
